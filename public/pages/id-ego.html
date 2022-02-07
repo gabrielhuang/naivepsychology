@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Id, Ego, and SuperEgo</title>
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <div class="wrapper">
+        <nav>
+            <i>-Navigation-</i> <br>
+        $ <a href="/">Home</a> &gt; <a href="..">Modeling the individual</a> &gt; <a href="/pages/id-ego.html">Id-Ego-SuperEgo</a> 
+        </nav>
+            <h2>Revisiting the Id, Ego, and Superego</h2>
+            <h3>Freud's model</h3> 
+            <p>The <a href="https://en.wikipedia.org/wiki/Id,_ego_and_super-ego">id, ego, and superego model</a> is a psychiatric model generally attributed to Sigmund Freud,
+            which factorizes human behavior into an animal-like and impulsive part (id), a rational action taker (ego), and the need to satisfy external rules (superego).</p>
+
+            <h3>Revisiting the id and ego</h3> 
+
+            <p>Here I present my own interpretation of these terms, which differ slightly from the usual definition because I think they are a more interesting factorization from a modeling persepective using the <a href="https://en.wikipedia.org/wiki/Reinforcement_learning">reinforcement-learning</a> (RL) framework. 
+            Rather than distinguishing them based on impulsivity (id) vs. rationality (ego), I prefer to distinguish them as the reward function (id) vs. the agent which attempts to optimize such a reward (ego).
+            Concerning the superego, my model does not consider it to be a separate agent in the brain. Rather, the superego is the process by which societal norms and expectations are internalized into our id and unconsciously tied to our emotions.</p>
+
+            <p>The <b>id</b> is our animal-like part or child-like part, and it's what distinguishes us from machines. 
+            It is the receptacle of all our emotions, including cravings and aversions, and is the driving force behind all our actions (under our model). The id:<br>
+            - makes us feel alive.<br>
+            - is the driving force behind *all* our actions<br>
+            - generates our impulses, spontaneous desires, and emotions, but is not necessarily what causes them<br>
+            - doesn't think in logical terms, and is more of a reactive nature. <br>
+            - doesn't really have a notion of time like the ego, and cannot model the future.<br>
+            - rather, the id remembers the past indirectly by generating various emotions depending on the situation.<br>
+            - the id changes slowly, and is a product of our genetics and past experiences.<br>
+            - the id be influenced, but only gradually, and over time.</p>
+
+            <p>Below is an illustration of how the id and ego fit together to generate human behavior. Basically, the id feels a bunch of emotions all the time, which are either perceived as positive (e.g. joy, excitment) or negative (e.g. frustration, anger). All those emotions aggregate (think–weighted sum) into a single scalar, which expresses our level of happiness/well-being.
+            The ego notices the current level of happiness, and attempts to improve current and future levels of happiness, according to simulations it runs inside our brain.
+            Those simulations might not be optimal, nevertheless they
+            </p>
+        
+            <h3>Does the superego exist?</h3> 
+
+            For me, the superego is not an agent inside the brain. 
+
+            <h3>Does the superego exist?</h3> 
+
+
+        <object data="id-ego/id-ego-superego-v1.svg"
+            width="720"
+            type="image/svg+xml"></object>
+        <a href="https://docs.google.com/drawings/d/1b4yVzoPTtZrlXrQg9-kXSgG-58IunEumS8j38miLi30/edit?usp=sharing">[source]</a>
+
+        <p align="right">[last modified 2022/02/07]</p>
+    </div>
+  </body>
+</html>
