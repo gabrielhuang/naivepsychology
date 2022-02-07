@@ -98,3 +98,7 @@ div.wrapper {
 footer {
     text-align: center;
 }
+
+object {
+    pointer-events: none;
+}
