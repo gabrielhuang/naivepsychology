@@ -1,10 +1,25 @@
 <article>
-<h3><a href="{{ base_path }}/{{ blog }}/{{ slug }}/">{{ title }}</a></h3>
-<p class="meta">Published on {{ date }} by <b>{{ author }}</b></p> 
+<style>
+    h3 {
+        font-family: Arial;
+        margin-bottom: 0.2ex;
+    }
+    h3 a {
+        color: #2aa198;
+    }
+    h3 a:visited{
+        color: #2aa198;
+    }
+    p {
+        margin-top: 0.2ex;
+        margin-bottom: 0.2ex;
+    }
+</style>
+
+<h3>♥ <a href="{{ base_path }}/{{ blog }}/{{ slug }}/">{{ title }}</a></h3> 
+<!-- <h3>♥ {{ title }}</h3> -->
 <p class="summary">
-{{ summary }}&nbsp;<a class="more" href="{{ base_path }}/{{ blog }}/{{ slug }}/">...</a>
+{{ summary }} <span style="color: gray">...</span> <!-- &nbsp;<a class="more" href="{{ base_path }}/{{ blog }}/{{ slug }}/">...</a> -->
 </p>
-<div>
-<a class="more" href="{{ base_path }}/{{ blog }}/{{ slug }}/">Read More</a>
-</div>
+<p><a class="more" href="{{ base_path }}/{{ blog }}/{{ slug }}/">Read More</a> | created on {{ date }} by <b>{{ author }}</b></p> 
 </article>

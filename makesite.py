@@ -57,7 +57,7 @@ def log(msg, *args):
     sys.stderr.write(msg.format(*args) + '\n')
 
 
-def truncate(text, words=25):
+def truncate(text, words=35):
     """Remove tags and truncate text to the specified number of words."""
     return ' '.join(re.sub('(?s)<.*?>', ' ', text).split()[:words])
 
@@ -168,9 +168,9 @@ def make_list(posts, dst, list_layout, item_layout, **params):
 
 def main():
     # Create a new _site directory from scratch.
-    if os.path.isdir('_site'):
-        shutil.rmtree('_site')
-    shutil.copytree('static', '_site')
+    if os.path.isdir('public'):
+        shutil.rmtree('public')
+    shutil.copytree('static', 'public')
 
     # Default parameters.
     params = {
@@ -196,22 +196,22 @@ def main():
     list_layout = render(page_layout, content=list_layout)
 
     # Create site pages.
-    make_pages('content/_index.html', '_site/index.html',
+    make_pages('content/_index.html', 'public/index.html',
                page_layout, render='yes', **params)
-    make_pages('content/[!_]*.html', '_site/{{ slug }}/index.html',
-               page_layout, **params)
+    make_pages('content/[!_]*.html', 'public/{{ slug }}/index.html',
+               page_layout, render='yes', **params)
 
     # Create blogs.
     blog_posts = make_pages('content/pages/*.md',
-                            '_site/pages/{{ slug }}/index.html',
+                            'public/pages/{{ slug }}/index.html',
                             post_layout, blog='pages', **params)
     blog_posts2 = make_pages('content/pages/*.html',
-                            '_site/pages/{{ slug }}/index.html',
+                            'public/pages/{{ slug }}/index.html',
                             post_layout, blog='pages', **params)
     blog_posts += blog_posts2
 
     # Create blog list pages.
-    make_list(blog_posts, '_site/pages/index.html',
+    make_list(blog_posts, 'public/pages/index.html',
               list_layout, item_layout, blog='pages', title='Newest Articles', **params)
 
 
