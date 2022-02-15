@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'ComingSoon';
+    src: url('/assets/fonts/Coming_Soon/ComingSoon-Regular.ttf');
+  }
+  
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'ComingSoon';
+}
+
+nav {
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+article p {
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  li {
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+  
+  li:before {
+    content: "♥";
+    padding-right: 5px;
+  }
+  
+i, em, .italic {
+	/* Should be font-style: italic; */
+	font-variation-settings: 'ital' 1;
+}
+
+a {
+    color: #b58900;
+}
+
+a:visited {
+color: #cb4b16;
+}
+a:hover {
+color: #cb4b16;
+}
+
+
+a.todo,a.todo:visited {
+    color: #bbb;
+}
+
+/*
+a {
+    text-decoration: none;
+    color: #2aa198;
+}
+
+
+
+h1 {
+    color: #d33682;
+}
+
+h2 {
+    color:#6c71c4;
+}
+
+p.lowkey {
+    color: gray;
+}
+
+*/
+
+
+body {
+    padding: 0;
+    margin: 0;
+    /*background-color: #150811; 
+    color: #ddd;*/
+    font-family: Arial;
+    width: 100%;
+}
+
+div.wrapper {
+    width: 720px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 90%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+object {
+    pointer-events: none;
+}
