@@ -204,10 +204,10 @@ def main():
     # Create blogs.
     blog_posts = make_pages('content/pages/*.md',
                             'public/pages/{{ slug }}/index.html',
-                            post_layout, blog='pages', **params)
+                            post_layout, render='yes', blog='pages', **params)
     blog_posts2 = make_pages('content/pages/*.html',
                             'public/pages/{{ slug }}/index.html',
-                            post_layout, blog='pages', **params)
+                            post_layout, render='yes', blog='pages', **params)
     blog_posts += blog_posts2
 
     # Create blog list pages.
